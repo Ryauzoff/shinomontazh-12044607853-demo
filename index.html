@@ -89,6 +89,8 @@
   .hero-v__zoom { transform: scale(calc(1 + var(--v-p, 0) * .08)); transform-origin: 50% 60%; will-change: transform; }
   .hero-v__offer { position: absolute; z-index: 3; left: var(--v-gutter); right: var(--v-gutter); bottom: clamp(3rem, 9vh, 7rem); max-width: min(44rem, 88vw); }
   .hero-v__offer .v-display { font-size: calc(var(--v-t-2xl) * 1.2); line-height: 1.02; }
+  .hero-v__swap { display: grid; }
+  .hero-v__swap > * { grid-area: 1 / 1; margin: 0; }
   .hero-v__offer .v-lede { margin-top: var(--v-4); color: var(--v-ink); opacity: .92; max-width: 38rem; }
   .hero-v__offer .hero__cta { margin-top: var(--v-5); }
   @media (max-width: 860px) {
@@ -272,8 +274,12 @@
         </div>
 
         <div class="v-scrim v-scrim--band" aria-hidden="true"></div>
-        <div class="hero-v__offer" data-v-cue="0 1 0 0">
-          <h1 class="v-display" data-v-kinetic="lines">Шиномонтаж в Перми без очереди</h1>
+        <div class="hero-v__offer">
+          <div class="hero-v__swap">
+            <h1 class="v-display" data-v-cue="0 0.36 0 0.05" data-v-kinetic="lines">Шиномонтаж в Перми без очереди</h1>
+            <p class="v-display" data-v-cue="0.34 0.68 0.05 0.05" data-v-kinetic="words">Приехали, машина сразу на подъёмник</p>
+            <p class="v-display" data-v-cue="0.66 1 0.05 0" data-v-kinetic="words">Через 30 минут уезжаете</p>
+          </div>
           <p class="v-lede">Записываетесь заранее, цену на переобувку знаете до приезда, балансировка уже в стоимости.</p>
           <div class="hero__cta">
             <a class="v-btn" href="#zapis">Записаться</a>
